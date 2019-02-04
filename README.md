@@ -1,2 +1,1 @@
-SIC Website, hosted on GitHub
-"# RVHS-Computing.github.io" 
+SIC Website, hosted on GitHub as "RVHS-Computing.github.io" 
