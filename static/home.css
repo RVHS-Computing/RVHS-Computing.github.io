@@ -205,7 +205,8 @@ html, body {
 .description{
 	font-size: 0.9rem;
 	font-family: montserrat;
-	text-align: justify;
+	text-align: left;
+	direction: ltr;
 }
 
 .container-fluid{
