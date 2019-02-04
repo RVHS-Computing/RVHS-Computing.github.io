@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<head>
+	<title>
+		Home
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Zhang Jikun">
+	<link rel="shortcut icon" href="/static/icon.png" type="image/x-icon">
+	<link rel="stylesheet" type= "text/css" href="/static/home.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div id="fadein">
+		<div id="frame">
+			<svg id="running-code" viewBox="0 0 600 500" height="320px" xmlns="http://www.w3.org/2000/svg">
+				<g>
+					<rect class="red-rect" stroke-width="0" x="30" y="20" height="20" rx="10">
+						<animate attributeName="width" from="0"  to="120" dur="0.05s" fill="freeze" id="line1a_anim" begin="0s; line14_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line13_anim.end"/>
+					</rect>
+					<rect class="yellow-rect" stroke-width="0" x="155" y="20" height="20" rx="10">
+						<animate attributeName="width" from="0"  to="80" dur="0.05s" fill="freeze" id="line1b_anim" begin="line1a_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line13_anim.end"/>
+					</rect>
+					<rect class="green-rect" stroke-width="0" x="240" y="20" height="20" rx="10">
+						<animate attributeName="width" from="0"  to="150" dur="0.1s" fill="freeze" id="line1c_anim" begin="line1b_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line13_anim.end"/>
+					</rect>
+					<rect class="yellow-rect" stroke-width="0" x="50" y="60" height="20" rx="10">
+						<animate attributeName="width" from="0" to="80" dur="0.1s" fill="freeze" id="line2a_anim" begin="line1c_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line14_anim.end"/>
+					</rect>
+					<rect class="green-rect" stroke-width="0" x="135" y="60" height="20" rx="10">
+						<animate attributeName="width" from="0" to="120" dur="0.1s" fill="freeze" id="line2b_anim" begin="line2a_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line14_anim.end"/>
+					</rect>
+					<rect class="yellow-rect" stroke-width="0" x="70" y="100" height="20" rx="10">
+						<animate attributeName="width" from="0" to="120" dur="0.2s" fill="freeze" id="line3_anim" begin="line2b_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line1_anim.end"/>
+					</rect>
+					<rect class="white-rect" stroke-width="0" x="90" y="140" height="20" rx="10">
+						<animate attributeName="width" from="0" to="500" dur="0.2s" fill="freeze" id="line4_anim" begin="line3_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line2_anim.end"/>
+					</rect>
+					<rect class="white-rect" stroke-width="0" x="90" y="180" height="20" rx="10">
+						<animate attributeName="width" from="0" to="500" dur="0.2s" fill="freeze" id="line5_anim" begin="line4_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line3_anim.end"/>
+					</rect>
+					<rect class="green-rect" stroke-width="0" x="70" y="220" height="20" rx="10">
+						<animate attributeName="width" from="0" to="150" dur="0.2s" fill="freeze" id="line6_anim" begin="line5_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line4_anim.end"/>
+					</rect>
+					<rect class="red-rect" stroke-width="0" x="70" y="260" height="20" rx="10">
+						<animate attributeName="width" from="0" to="70" dur="0.1s" fill="freeze" id="line7a_anim" begin="line6_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line5_anim.end"/>
+					</rect>
+					<rect class="yellow-rect" stroke-width="0" x="145" y="260" height="20" rx="10">
+						<animate attributeName="width" from="0" to="140" dur="0.1s" fill="freeze" id="line7b_anim" begin="line7a_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line5_anim.end"/>
+					</rect>
+					<rect class="red-rect" stroke-width="0" x="90" y="300" height="20" rx="10">
+						<animate attributeName="width"from="0" to="70" dur="0.1s" fill="freeze" id="line8a_anim" begin="line7b_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line6_anim.end"/>
+					</rect>
+					<rect class="green-rect" stroke-width="0" x="165" y="300" height="20" rx="10">
+						<animate attributeName="width"from="0" to="180" dur="0.1s" fill="freeze" id="line8b_anim" begin="line8a_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line6_anim.end"/>
+					</rect>
+					<rect class="red-rect" stroke-width="0" x="110" y="340" height="20" rx="10">
+						<animate attributeName="width" from="0" to="110" dur="0.2s" fill="freeze" id="line9_anim" begin="line8b_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line7_anim.end"/>
+					</rect>
+					<rect class="white-rect" stroke-width="0" x="110" y="380" height="20" rx="10">
+						<animate attributeName="width" from="0" to="130" dur="0.2s"fill="freeze" id="line10_anim" begin="line9_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line8_anim.end"/>
+					</rect>
+					<rect class="green-rect" stroke-width="0" x="90" y="420" height="20" rx="10">
+						<animate attributeName="width" from="0" to="90" dur="0.2s"fill="freeze" id="line11_anim" begin="line10_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line9_anim.end"/>
+					</rect>
+					<rect class="yellow-rect" stroke-width="0" x="70" y="460" height="20" rx="10">
+						<animate attributeName="width" from="0" to="180" dur="0.2s" fill="freeze" id="line12_anim" begin="line11_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line10_anim.end"/>
+					</rect>
+					<rect class="green-rect" stroke-width="0" x="50" y="500" height="20" rx="10">
+						<animate attributeName="width" from="0" to="50"dur="0.2s" fill="freeze" id="line13_anim" begin="line12_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line11_anim.end"/>
+					</rect>
+					<rect class="green-rect" stroke-width="0" x="30" y="540" height="20" rx="10">
+						<animate attributeName="width" from="0" to="50"dur="0.2s" fill="freeze" id="line14_anim" begin="line13_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line12_anim.end"/>
+					</rect>
+
+					<rect class="red-rect" stroke-width="0" x="30" y="580" height="20" rx="10">
+						<animate attributeName="width" from="0"  to="120" dur="0.05s" fill="freeze" begin="line14_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line13_anim.end"/>
+					</rect>
+					<rect class="yellow-rect" stroke-width="0" x="155" y="580" height="20" rx="10">
+						<animate attributeName="width" from="0"  to="80" dur="0.05s" fill="freeze" begin="line1a_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line13_anim.end"/>
+					</rect>
+					<rect class="green-rect" stroke-width="0" x="240" y="580" height="20" rx="10">
+						<animate attributeName="width" from="0"  to="150" dur="0.1s" fill="freeze" begin="line1b_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line13_anim.end"/>
+					</rect>
+					<rect class="yellow-rect" stroke-width="0" x="50" y="620" height="20" rx="10">
+						<animate attributeName="width" from="0" to="80" dur="0.1s" fill="freeze" begin="line1c_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line14_anim.end"/>
+					</rect>
+					<rect class="green-rect" stroke-width="0" x="135" y="620" height="20" rx="10">
+						<animate attributeName="width" from="0" to="120" dur="0.1s" fill="freeze" begin="line2a_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line1c_anim.end"/>
+					</rect>
+					<rect class="yellow-rect" stroke-width="0" x="70" y="660" height="20" rx="10">
+						<animate attributeName="width" from="0" to="120" dur="0.2s" fill="freeze" begin="line2b_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line1_anim.end"/>
+					</rect>
+					<rect class="white-rect" stroke-width="0" x="90" y="700" height="20" rx="10">
+						<animate attributeName="width" from="0" to="500" dur="0.2s"fill="freeze"begin="line3_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line2b_anim.end"/>
+					</rect>
+					<rect class="white-rect" stroke-width="0" x="90" y="740" height="20" rx="10">
+						<animate attributeName="width" from="0" to="500" dur="0.2s"fill="freeze" begin="line4_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line3_anim.end"/>
+					</rect>
+					<rect class="green-rect" stroke-width="0" x="70" y="780" height="20" rx="10">
+						<animate attributeName="width" from="0" to="150" dur="0.2s"fill="freeze" begin="line5_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line4_anim.end"/>
+					</rect>
+					<rect class="red-rect" stroke-width="0" x="70" y="820" height="20" rx="10">
+						<animate attributeName="width" from="0" to="70" dur="0.1s" fill="freeze" begin="line6_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line5_anim.end"/>
+					</rect>
+					<rect class="yellow-rect" stroke-width="0" x="145" y="820" height="20" rx="10">
+						<animate attributeName="width" from="0" to="140" dur="0.1s" fill="freeze" begin="line7a_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line5_anim.end"/>
+					</rect>
+					<rect class="red-rect" stroke-width="0" x="90" y="860" height="20" rx="10">
+						<animate attributeName="width"from="0" to="70" dur="0.1s" fill="freeze" begin="line7b_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line6_anim.end"/>
+					</rect>
+					<rect class="green-rect" stroke-width="0" x="165" y="860" height="20" rx="10">
+						<animate attributeName="width"from="0" to="180" dur="0.1s" fill="freeze" begin="line8a_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line6_anim.end"/>
+					</rect>
+					<rect class="red-rect" stroke-width="0" x="110" y="900" height="20" rx="10">
+						<animate attributeName="width" from="0" to="110"dur="0.2s"fill="freeze" begin="line8b_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line7b_anim.end"/>
+					</rect>
+					<rect class="white-rect" stroke-width="0" x="110" y="940" height="20" rx="10">
+						<animate attributeName="width" from="0" to="130"dur="0.2s"fill="freeze" begin="line9_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line8b_anim.end"/>
+					</rect>
+					<rect class="green-rect" stroke-width="0" x="90" y="980" height="20" rx="10">
+						<animate attributeName="width" from="0" to="90"dur="0.2s"fill="freeze" begin="line10_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line9_anim.end"/>
+					</rect>
+					<rect class="yellow-rect" stroke-width="0" x="70" y="1020" height="20" rx="10">
+						<animate attributeName="width" from="0" to="180"dur="0.2s"fill="freeze" begin="line11_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line10_anim.end"/>
+					</rect>
+					<rect class="green-rect"" stroke-width="0" x="50" y="1060" height="20" rx="10">
+						<animate attributeName="width" from="0" to="50"dur="0.2s"fill="freeze"" begin="line12_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line11_anim.end"/>
+					</rect>
+					<rect class="green-rect" stroke-width="0" x="30" y="1100" height="20" rx="10">
+						<animate attributeName="width" from="0" to="50"dur="0.2s" fill="freeze" begin="line13_anim.end"/>
+						<animate attributeName="width" from="0" to="0" dur="0s" fill="freeze" begin="line12_anim.end"/>
+					</rect>
+					<animateMotion from="0, 0" to="0, -560" dur="2.8s" begin="line12_anim.end" repeatCount="indefinite"/>
+				</g>
+			</svg>
+		</div>
+		<div id="enter"> 
+			ENTER
+		</div>
+	</div>
+	<div id="content">
+		<div id="menu">
+			<nav class="navbar navbar-light">
+				<a id="navbar-brand" class="navbar-brand" href="#" draggable="false">SIC 2019</a>
+				<button id="navbar-toggler" class="btn" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false" aria-controls="navbarCollapse">
+					&#9776;
+				</button>
+			</nav>
+			<div class="collapse" id="navbarCollapse">
+				<a class="menu-link" href="#" draggable="false">About Us</a><br>
+				<a class="menu-link" href="#" draggable="false">Python</a><br>
+				<a class="menu-link" href="#" draggable="false">Web Development</a><br>
+				<a class="menu-link" href="#" draggable="false">Artificial Intelligence</a><br>
+				<a class="menu-link" href="#" draggable="false">Other Projects</a><br>
+				<a class="menu-link" href="#" draggable="false">Workshops</a><br>
+			</div>
+		</div>
+		<div id="top"></div>
+		<div id="display_img">
+			<img src="/static/main.png" width="100%" draggable="false"/>
+		</div>
+		<div id="mottos">
+			<div class="header">
+				Our Motto
+			</div>
+			<div id="motto1" class="motto">
+				<div class="header">
+					Innovation from the Heart
+				</div>
+				<div class="description">
+					In Senior Infocomm, we are constantly challenging ourselves by coming up with innovative solutions to solve problems and invent ways to benefit the school and the community. We aim to improves the lives of the people around us through intelligent applications of our technical skills and expertises.
+				</div>
+			</div>
+			<div id="motto2" class="motto">
+				<div class="header">
+					Passion at its Core
+				</div>
+				<div class="description">
+					As an interest-driven CCA, we have an unwavering passion and drive to pursue our interests and have what it takes to perservere through challenges. We regularly stay up to date with cutting-edge technologies and equip ourselves with the necessary technical skills overcome problems. 
+				</div>
+			</div>
+		</div>
+		<footer class="container-fluid">
+			<a id="to_top" href="#top" draggable="false">To top</a>
+			<div class="row">
+				<div id="copyright" class="col">
+					<img id="logo" src="/static/logo.png" alt="Logo" draggable="false"><br>
+					Website created by River Valley Senior Infocomm Club.<br>
+					All rights reserved.
+				</div>
+				<div id="contacts" class="col">
+					CONTACT US<br>
+					<a href="mailto: rvseniorinfocomm@gmail.com" draggable="false"><img id="email" src="/static/gmail.png" alt="Gmail" draggable="false"/></a><br>
+					Address<br>
+					6 Boon Lay Avenue Singapore 649961 
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script type="text/javascript" src="/static/home.js"></script>
+</body>
