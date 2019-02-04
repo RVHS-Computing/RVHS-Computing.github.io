@@ -46,8 +46,17 @@ $("body").scroll(function() {
 	$(".menu-link").css('color', "rgb(" + Math.max(80, 255 - dist_body/300 * 175).toString() + "," + Math.max(80, 255 - dist_body/300 * 175).toString() + "," + Math.max(80, 255 - dist_body/300 * 175).toString() + ")");
 	$(".navbar").css('height', Math.max(60, 70 - dist_body/300 * 10).toString() + 'px');
 	$("#navbar-brand").css('font-size', Math.max(1, 1.5 - dist_body/300 * 0.5) + 'rem');
-	$("#motto1").css('margin-left', Math.max(0, $("#motto1").offset().top / 20 - 15).toString() + 'rem');
-	$("#motto2").css('margin-right', Math.max(0, $("#motto2").offset().top / 20 - 15).toString() + 'rem');
+
+	if ($("#motto1").offset().top < 450){
+		$("#motto1").stop().animate({'margin-left': '0rem'});
+	} else {
+		$("#motto1").stop().animate({'margin-left': '50rem'});
+	}
+	if ($("#motto2").offset().top < 450){
+		$("#motto2").stop().animate({'margin-right': '0rem'});
+	} else {
+		$("#motto2").stop().animate({'margin-right': '50rem'});
+	}
 });
 
 $(".menu-link").hover(function(){
