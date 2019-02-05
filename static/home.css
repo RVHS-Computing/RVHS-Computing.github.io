@@ -235,6 +235,8 @@ html, body {
 #email-link{
 	text-decoration: none!important;
 	color: white;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #email-link:hover{
@@ -243,7 +245,6 @@ html, body {
 
 #email{
 	max-width: 50px;
-	margin-top: 20px;
 }
 
 .row{
