@@ -74,7 +74,7 @@ html, body {
 	text-align: center;
 	height: 35px;
 	cursor: pointer;
-	color: rgb(225, 225, 225);
+	color: white;
 	margin: auto;
 	margin-top: 20px;
 	border-radius: 5px;
@@ -83,7 +83,7 @@ html, body {
 }
 
 #enter:hover{
-	color: white;
+	color: rgb(225, 225, 225);
 	-webkit-animation: fill_up 0.5s linear;
 	-moz-animation: fill_up 0.5s linear;
 	animation: fill_up 0.5s linear;
@@ -232,10 +232,18 @@ html, body {
 	margin-bottom: 20px;
 }
 
+#email-link{
+	text-decoration: none!important;
+	color: white;
+}
+
+#email-link:hover{
+	color: rgb(225, 225, 225);
+}
+
 #email{
 	max-width: 50px;
 	margin-top: 20px;
-	margin-bottom: 20px;
 }
 
 .row{
@@ -272,6 +280,9 @@ html, body {
 		height: 250px;
 		padding-top: 15px;
 		padding-left: 2rem;
+	}
+	#enter{
+		color: orange;
 	}
 }
 

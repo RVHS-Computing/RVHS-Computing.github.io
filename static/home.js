@@ -37,6 +37,11 @@ $("#navbar-brand").click(function() {
 	location.reload();
 });
 
+var movingIn1 = false;
+var movingOut1 = false;
+var movingIn2 = false;
+var movingOut2 = false;
+
 $("body").scroll(function() { 
 	dist_body = $("body").scrollTop();
 	$("#menu").css('background-color', 'rgba(240, 240, 240,'+ Math.min(0.9, dist_body/300).toString() + ')');
@@ -47,15 +52,23 @@ $("body").scroll(function() {
 	$(".navbar").css('height', Math.max(60, 70 - dist_body/300 * 10).toString() + 'px');
 	$("#navbar-brand").css('font-size', Math.max(1, 1.5 - dist_body/300 * 0.5) + 'rem');
 
-	if ($("#motto1").offset().top < 450){
+	if ($("#motto1").offset().top < 400 && movingIn1 == false){
+		movingOut1 = false;
 		$("#motto1").stop().animate({'margin-left': '0rem'});
-	} else {
-		$("#motto1").stop().animate({'margin-left': '50rem'});
+		movingIn1 = true;
+	} else if ($("#motto1").offset().top >= 400 && movingOut1 == false) {
+		movingIn1 = false;
+		$("#motto1").stop().animate({'margin-left': '60rem'});
+		movingOut1 = true;
 	}
-	if ($("#motto2").offset().top < 450){
+	if ($("#motto2").offset().top < 400){
+		movingOut2 = false;
 		$("#motto2").stop().animate({'margin-right': '0rem'});
-	} else {
-		$("#motto2").stop().animate({'margin-right': '50rem'});
+		movingIn2 = true;
+	} else if ($("#motto2").offset().top >= 400 && movingOut2 == false) {
+		movingIn2 = false;
+		$("#motto2").stop().animate({'margin-right': '60rem'});
+		movingOut2 = true;
 	}
 });
 
