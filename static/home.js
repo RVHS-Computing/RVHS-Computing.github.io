@@ -12,9 +12,7 @@ $("#enter").click(function(event) {
 	$("#running-code").css('display', 'none');
 	$("#frame").css('padding-left', '0');
 	$("#successful").css('display', 'block');
-	$("#fadein").fadeOut(3000);
-	$("#fadein").delay(1000).addClass('flicker-out-1');
-	$("#content").delay(3000).addClass('flicker-in-1');
+	$("#fadein").fadeOut(2000);
 });
 
 $('#to_top').click(function(event) {
@@ -46,8 +44,8 @@ var movingOut1 = false;
 var movingIn2 = false;
 var movingOut2 = false;
 
-$("body").scroll(function() { 
-	dist_body = $("body").scrollTop();
+$(window).scroll(function() { 
+	dist_body = $(window).scrollTop();
 	$("#menu").css('background-color', 'rgba(240, 240, 240,'+ Math.min(0.9, dist_body/300).toString() + ')');
 	$(".navbar-brand").css('color', "rgb(" + Math.max(80, 255 - dist_body/300 * 175).toString() + "," + Math.max(80, 255 - dist_body/300 * 175).toString() + "," + Math.max(80, 255 - dist_body/300 * 175).toString() + ")");
 	$("#navbar-toggler").css('color', "rgb(" + Math.max(80, 255 - dist_body/300 * 175).toString() + "," + Math.max(80, 255 - dist_body/300 * 175).toString() + "," + Math.max(80, 255 - dist_body/300 * 175).toString() + ")");
@@ -56,20 +54,21 @@ $("body").scroll(function() {
 	$(".navbar").css('height', Math.max(60, 70 - dist_body/300 * 10).toString() + 'px');
 	$("#navbar-brand").css('font-size', Math.max(1, 1.5 - dist_body/300 * 0.5) + 'rem');
 
-	if ($("#motto1").offset().top < 400 && movingIn1 == false){
+
+	if ($("#motto1").offset().top - $(window).scrollTop() < 400  && movingIn1 == false){
 		movingOut1 = false;
 		$("#motto1").stop().animate({'margin-left': '0rem'});
 		movingIn1 = true;
-	} else if ($("#motto1").offset().top >= 400 && movingOut1 == false) {
+	} else if ($("#motto1").offset().top - $(window).scrollTop() >= 400 && movingOut1 == false) {
 		movingIn1 = false;
 		$("#motto1").stop().animate({'margin-left': '60rem'});
 		movingOut1 = true;
 	}
-	if ($("#motto2").offset().top < 400){
+	if ($("#motto2").offset().top - $(window).scrollTop() < 400 && movingIn2 == false){
 		movingOut2 = false;
 		$("#motto2").stop().animate({'margin-right': '0rem'});
 		movingIn2 = true;
-	} else if ($("#motto2").offset().top >= 400 && movingOut2 == false) {
+	} else if ($("#motto1").offset().top - $(window).scrollTop() >= 400 && movingOut2 == false) {
 		movingIn2 = false;
 		$("#motto2").stop().animate({'margin-right': '60rem'});
 		movingOut2 = true;
