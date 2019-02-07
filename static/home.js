@@ -9,8 +9,12 @@ window.onload = function(e){
 };
 
 $("#enter").click(function(event) {
-	$("#fadein").fadeOut();
-	$("#content").fadeIn();
+	$("#running-code").css('display', 'none');
+	$("#frame").css('padding-left', '0');
+	$("#successful").css('display', 'block');
+	$("#fadein").fadeOut(3000);
+	$("#fadein").delay(1000).addClass('flicker-out-1');
+	$("#content").delay(3000).addClass('flicker-in-1');
 });
 
 $('#to_top').click(function(event) {
