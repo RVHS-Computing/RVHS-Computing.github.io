@@ -1,0 +1,245 @@
+@font-face {
+	font-family: montserrat;
+	src: url(/static/fonts/Montserrat-Regular.otf);
+}
+
+@font-face {
+	font-family: montserrat-semibold;
+	src: url(/static/fonts/Montserrat-SemiBold.otf);
+}
+
+@font-face {
+	font-family: montserrat-bold;
+	src: url(/static/fonts/Montserrat-Bold.otf);
+}
+
+html, body {
+	height: 100%;
+	scroll-behavior: smooth;
+	background-image: url(/static/images/about-background.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;	
+}
+
+.navbar{
+	height: 70px;
+}
+
+#navbar-brand{
+	font-size: 1.5rem;
+	font-family: montserrat-bold;
+	color: white;
+	color: rgb(80, 80, 80);
+}
+
+#navbar-brand:hover{
+	text-shadow: rgba(120, 120, 120, 0.8) 0.05em 0.05em 0.1em;
+	color: rgb(40, 40, 40);
+}
+
+#content{
+	width: 100%;
+	display: none;
+	text-align:	center;	
+}
+
+#menu{
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+	background-color: rgba(240, 240, 240, 0.8);
+}
+
+#navbarCollapse {
+	text-align: center;
+}
+
+#navbar-toggler{
+	border: solid 2px rgb(80, 80, 80);
+	box-shadow: none !important;
+	color: rgb(80, 80, 80);
+	background-color: transparent;
+}
+
+#navbar-toggler:hover{
+	border: solid 2px rgb(40, 40, 40);
+	color: rgb(40, 40, 40);
+}
+
+.menu-link{
+	display: block;
+	color: 	rgb(80, 80, 80);
+	font-size: 1rem;
+	-webkit-transition-property: font-size;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-timing-function: linear;
+	transition-property: font-size;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+	font-family: montserrat-semibold;
+	text-decoration: none !important;
+}
+
+.menu-link:hover{
+	font-size: 1.25rem;
+	color: rgb(40, 40, 40);
+	text-shadow: rgba(120, 120, 120, 0.8) 0.05em 0.05em 0.1em;
+}
+
+.menu-link-active{
+	color: rgb(40, 40, 40);
+	display: block;
+	font-size: 1rem;
+	-webkit-transition-property: font-size;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-timing-function: linear;
+	transition-property: font-size;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+	font-family: montserrat-semibold;
+	text-decoration: none !important;
+}
+
+.menu-link-active:hover{
+	color: rgb(0, 0, 0);
+	text-shadow: rgba(120, 120, 120, 0.8) 0.05em 0.05em 0.1em;
+	font-size: 1.25rem;
+}
+
+#top{
+	height: 5rem;
+}
+
+#introduction{
+	max-width: 800px;
+	width: 100%;
+	margin: auto;
+	padding: 2rem;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+	margin-bottom: 2rem;
+}
+
+#main-logo{
+	max-width: 300px;
+	margin: auto;
+	margin-bottom: 2rem;
+}
+
+.mottos{
+	text-align: center;
+	max-width: 800px;
+	margin: auto;
+	width: 100%;
+	overflow-x: hidden;
+	padding: 1rem;
+}
+
+#motto-left{
+	direction: rtl;
+}
+
+#motto1{
+	text-align: left;
+	margin-right: auto;
+	margin-left: 60rem;
+}
+
+#motto2{
+	text-align: right;
+	margin-left: auto;
+	margin-right: 60rem;
+}
+
+.motto{
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+	padding: 1rem;
+	width: 40rem;
+}
+
+.header{
+	font-size: 1.25rem;
+	font-family: montserrat-semibold;
+	margin-bottom: 1rem;
+}
+
+.description{
+	font-size: 0.9rem;
+	font-family: montserrat;
+	text-align: justify;
+	direction: ltr;
+}
+
+footer{
+	margin-top: 3rem;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background: rgb(50, 50, 50);
+	color: white
+}
+
+#to_top{
+	color: white;
+	text-decoration: none !important;
+	font-family: montserrat-semibold;
+}
+
+#to_top:hover{
+	color: grey;
+}
+
+#logo{
+	max-width: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-item{
+	margin-top: 2rem;
+}
+
+.link{
+	text-decoration: none!important;
+	color: white;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.link:hover{
+	color: grey;
+}
+
+.row{
+	margin: 0 !important;
+}
+
+footer{
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+	.navbar{
+		height: 60px!important;
+	}
+	#navbar-brand{
+		font-size: 1rem !important;
+		color: rgb(80, 80, 80)!important;
+	}
+	#navbar-toggler{
+		border-color: rgb(80, 80, 80) !important;
+		color: rgb(80, 80, 80)!important;
+	}
+	#menu{
+		background-color: rgba(240, 240, 240, 0.8)!important;
+	}
+	.menu-link{
+		color: black !important;
+	}
+	#top{
+		height: 60px;
+	}
+}
+
+

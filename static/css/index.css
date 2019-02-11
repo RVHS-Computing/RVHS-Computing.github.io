@@ -1,21 +1,95 @@
 @font-face {
 	font-family: montserrat;
-	src: url("/static/Montserrat-Regular.otf");
+	src: url(/static/fonts/Montserrat-Regular.otf);
 }
 
 @font-face {
 	font-family: montserrat-semibold;
-	src: url("/static/Montserrat-SemiBold.otf");
+	src: url(/static/fonts/Montserrat-SemiBold.otf);
 }
 
 @font-face {
 	font-family: montserrat-bold;
-	src: url("/static/Montserrat-Bold.otf");
+	src: url(/static/fonts/Montserrat-Bold.otf);
 }
 
 html, body {
 	height: 100%;
 	scroll-behavior: smooth;
+}
+
+.navbar{
+	height: 70px;
+}
+
+#navbar-brand{
+	font-size: 1.5rem;
+	font-family: montserrat-bold;
+	color: white;
+}
+
+#navbar-brand:hover{
+	text-shadow: rgba(120, 120, 120, 0.8) 0.05em 0.05em 0.1em;
+}
+
+#content{
+	width: 100%;
+}
+
+#menu{
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+}
+
+#navbarCollapse {
+	text-align: center;
+}
+
+#navbar-toggler{
+	border: solid 2px rgb(255, 255, 255);
+	box-shadow: none !important;
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+}
+
+.menu-link{
+	display: block;
+	color: rgb(215, 215, 215);
+	font-size: 1rem;
+	-webkit-transition-property: font-size;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-timing-function: linear;
+	transition-property: font-size;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+	font-family: montserrat-semibold;
+	text-decoration: none !important;
+}
+
+.menu-link:hover{
+	font-size: 1.25rem;
+	text-shadow: rgba(120, 120, 120, 0.8) 0.05em 0.05em 0.1em;
+}
+
+.menu-link-active{
+	color: rgb(40, 40, 40);
+	display: block;
+	font-size: 1rem;
+	-webkit-transition-property: font-size;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-timing-function: linear;
+	transition-property: font-size;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+	font-family: montserrat-semibold;
+	text-decoration: none !important;
+}
+
+.menu-link-active:hover{
+	color: rgb(0, 0, 0);
+	text-shadow: rgba(120, 120, 120, 0.8) 0.05em 0.05em 0.1em;
+	font-size: 1.25rem;
 }
 
 #fadein{
@@ -38,7 +112,7 @@ html, body {
 #frame{
 	position: relative;
 	text-align: center;
-	background-image: url("/static/laptop-background.png");
+	background-image: url(/static/images/laptop-background.png);
 	background-size: cover;
 	width: 720px;
 	height: 500px;
@@ -98,54 +172,6 @@ html, body {
 	background-position: 100% 0%;
 }
 
-.navbar{
-	height: 70px;
-}
-
-#navbar-brand{
-	font-size: 1.5rem;
-	font-family: montserrat-bold;
-	color: white;
-}
-
-#content{
-	width: 100%;
-}
-
-#menu{
-	position: fixed;
-	width: 100%;
-	z-index: 3;
-	padding-right: 1rem;
-}
-
-#navbarCollapse {
-	text-align: center;
-}
-
-#navbar-toggler{
-	border: solid 2px rgb(255, 255, 255);
-	color: rgb(255, 255, 255);
-	background-color: transparent;
-}
-
-.menu-link{
-	color: rgb(255, 255, 255);
-	line-height: 2;
-	font-size: 1rem;
-	background-color: transparent;
-	-webkit-transition-property: font-size;
-	-webkit-transition-duration: 0.2s;
-	-webkit-transition-timing-function: linear;
-	transition-property: font-size;
-	transition-duration: 0.2s;
-	transition-timing-function: linear;
-	font-family: montserrat-semibold;
-}
-
-.menu-link:hover{
-	font-size: 1.25rem;
-}
 
 #running-code{
 	z-index: -1;
@@ -212,22 +238,24 @@ html, body {
 .description{
 	font-size: 0.9rem;
 	font-family: montserrat;
-	text-align: left;
+	text-align: justify;
 	direction: ltr;
 }
 
-.container-fluid{
+footer{
 	margin-top: 3rem;
 	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	background: rgb(50, 50, 50);
-	color: white
+	color: white;
+	font-size: 0.9rem;
 }
 
 #to_top{
 	color: white;
 	text-decoration: none !important;
+	font-family: montserrat-semibold;
 }
 
 #to_top:hover{
@@ -239,7 +267,11 @@ html, body {
 	margin-bottom: 20px;
 }
 
-#email-link, #youtube-link{
+.footer-item{
+	margin-top: 2rem;
+}
+
+.link{
 	text-decoration: none!important;
 	color: white;
 	display: block;
@@ -247,20 +279,12 @@ html, body {
 	margin-bottom: 15px;
 }
 
-#email-link:hover{
-	color: rgb(225, 225, 225);
-}
-
-#email{
-	max-width: 50px;
+.link:hover{
+	color: grey;
 }
 
 .row{
 	margin: 0 !important;
-}
-
-#copyright, #contacts{
-	font-size: 0.9rem;
 }
 
 @media screen and (max-width: 500px) {
