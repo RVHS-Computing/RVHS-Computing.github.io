@@ -18,6 +18,7 @@
 	<link rel="stylesheet" type= "text/css" href="/static/css/index.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="/static/css/odometer-theme-default.css" />
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -202,11 +203,8 @@
 			</nav>
 			<div class="collapse" id="navbarCollapse">
 				<a class="menu-link" href="/about.html" draggable="false">About Us</a><br>
-				<a class="menu-link" href="#" draggable="false">Python</a><br>
-				<a class="menu-link" href="#" draggable="false">Web Development</a><br>
-				<a class="menu-link" href="#" draggable="false">Artificial Intelligence</a><br>
-				<a class="menu-link" href="#" draggable="false">Other Projects</a><br>
-				<a class="menu-link" href="/Workshop.html" draggable="false">Workshops</a><br>
+				<a class="menu-link" href="/projects.html" draggable="false">Projects</a><br>
+				<a class="menu-link" href="/workshop.html" draggable="false">Workshops</a><br>
 				<a class="menu-link" href="https://docs.google.com/forms/d/e/1FAIpQLSetzgEHbHMv6OjSN9c5ALsyWJbo2AskFRPP--tJ2d8vnqgYXA/viewform?usp=sf_link" draggable="false">JOIN US FOR 2019!</a><br>
 			</div>
 		</div>
@@ -214,25 +212,34 @@
 		<div id="display_img">
 			<img src="/static/images/main.png" width="100%" draggable="false"/>
 		</div>
-		<div class="mottos">
-			<div id="motto1" class="motto">
-				<div class="header">
-					Innovation from the Heart
-				</div>
-				<div class="description">
-					In Senior Infocomm, we are constantly challenging ourselves by coming up with innovative solutions to solve problems and invent ways to benefit the school and the community. We aim to improves the lives of the people around us through intelligent applications of our technical skills and expertises.
+		<div id="countdown-timer" class="row">
+			<div class="col-sm-3">
+				<div class="countdown-cell" id="countdown_cell_day">
+					<h1 class="countdown-value odometer" id="countdown_days"></h1>
+					<h4 class="countdown-unit">DAYS</h4>
 				</div>
 			</div>
-		</div>
-		<div id="motto-left" class="mottos">
-			<div id="motto2" class="motto">
-				<div class="header">
-					Passion at its Core
-				</div>
-				<div class="description">
-					As an interest-driven CCA, we have an unwavering passion and drive to pursue our interests and have what it takes to perservere through challenges. We regularly stay up to date with cutting-edge technologies and equip ourselves with the necessary technical skills to overcome problems. 
+			<div class="col-sm-3">
+				<div class="countdown-cell" id="countdown_cell_hour">
+					<h1 class="countdown-value odometer" id="countdown_hours"></h1>
+					<h4 class="countdown-unit">HOURS</h4>
 				</div>
 			</div>
+			<div class="col-sm-3">
+				<div class="countdown-cell" id="countdown_cell_min">
+					<h1 class="countdown-value odometer" id="countdown_minutes"></h1>
+					<h4 class="countdown-unit">MINUTES</h4>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="countdown-cell" id="countdown_cell_sec">
+					<h1 class="countdown-value odometer" id="countdown_seconds"></h1>
+					<h4 class="countdown-unit">SECONDS</h4>
+				</div>
+			</div>
+			<a id="sign-up-link" href="https://docs.google.com/forms/d/e/1FAIpQLSetzgEHbHMv6OjSN9c5ALsyWJbo2AskFRPP--tJ2d8vnqgYXA/viewform?usp=sf_link" draggable="false">
+				Until SIGN UP CLOSES! SIGN UP NOW!
+			</a>
 		</div>
 		<footer class="container-fluid">
 			<a id="to_top" href="#top" draggable="false">To Top</a>
@@ -267,4 +274,5 @@
 		</footer>
 	</div>
 	<script type="text/javascript" src="/static/scripts/index.js"></script>
+	<script type="text/javascript" src="/static/scripts/odometer.js"></script>
 </body>

@@ -28,7 +28,8 @@ $(window).scroll(function() {
 	dist_body = $(window).scrollTop();
 	$(".navbar").css('height', Math.max(60, 70 - dist_body/300 * 10).toString() + 'px');
 	$("#navbar-brand").css('font-size', Math.max(1.25, 1.5 - dist_body/300 * 0.25) + 'rem');
-	$("#title").css('background-position', '0% ' + Math.min(100, Math.max(0, (250 + dist_body - $("#title").offset().top)/ 2)).toString() + '%');
+	$("#title").css('background-position', '0% ' + Math.min(100, Math.max(0, (250 + dist_body - $("#title").offset().top)/ 3)).toString() + '%');
+	$("#menu").css('background-color', 'rgba(240, 240, 240,'+ Math.min(0.9, dist_body/300).toString() + ')');
 
 });
 $(".menu-link").click(function(event){

@@ -46,7 +46,7 @@ var movingOut1 = false;
 var movingIn2 = false;
 var movingOut2 = false;
 
-$(window).scroll(function() { 
+$(window).scroll(function() {
 	dist_body = $(window).scrollTop();
 	$("#menu").css('background-color', 'rgba(240, 240, 240,'+ Math.min(0.9, dist_body/300).toString() + ')');
 	$("#navbar-brand").css('color', "rgb(" + Math.max(80, 255 - dist_body/300 * 175).toString() + "," + Math.max(80, 255 - dist_body/300 * 175).toString() + "," + Math.max(80, 255 - dist_body/300 * 175).toString() + ")");
@@ -55,26 +55,6 @@ $(window).scroll(function() {
 	$(".menu-link").css('color', "rgb(" + Math.max(80, 215 - dist_body/300 * 135).toString() + "," + Math.max(80, 215 - dist_body/300 * 135).toString() + "," + Math.max(80, 215 - dist_body/300 * 135).toString() + ")");
 	$(".navbar").css('height', Math.max(60, 70 - dist_body/300 * 10).toString() + 'px');
 	$("#navbar-brand").css('font-size', Math.max(1.25, 1.5 - dist_body/300 * 0.25) + 'rem');
-
-
-	if ($("#motto1").offset().top - $(window).scrollTop() < 400  && movingIn1 == false){
-		movingOut1 = false;
-		$("#motto1").stop().animate({'margin-left': '0rem'});
-		movingIn1 = true;
-	} else if ($("#motto1").offset().top - $(window).scrollTop() >= 400 && movingOut1 == false) {
-		movingIn1 = false;
-		$("#motto1").stop().animate({'margin-left': '60rem'});
-		movingOut1 = true;
-	}
-	if ($("#motto2").offset().top - $(window).scrollTop() < 400 && movingIn2 == false){
-		movingOut2 = false;
-		$("#motto2").stop().animate({'margin-right': '0rem'});
-		movingIn2 = true;
-	} else if ($("#motto1").offset().top - $(window).scrollTop() >= 400 && movingOut2 == false) {
-		movingIn2 = false;
-		$("#motto2").stop().animate({'margin-right': '60rem'});
-		movingOut2 = true;
-	}
 });
 
 $(".navbar-brand").hover(function(){
@@ -102,6 +82,33 @@ $("#navbar-toggler").mouseleave(function(){
 	$("#navbar-toggler").css('color', "rgb(" + Math.max(80, 255 - dist_body/300 * 175).toString() + "," + Math.max(80, 255 - dist_body/300 * 175).toString() + "," + Math.max(80, 255 - dist_body/300 * 175).toString() + ")");
 	$("#navbar-toggler").css('border-color', "rgb(" + Math.max(80, 255 - dist_body/300 * 175).toString() + "," + Math.max(80, 255 - dist_body/300 * 175).toString() + "," + Math.max(80, 255 - dist_body/300 * 175).toString() + ")");
 });
+
+window.odometerOptions = {
+	selector: '.countdown-value',
+	duration: 800
+};
+
+var countDownDate = new Date("Feb 18, 2019 00:00:00").getTime();
+var x = setInterval(function() {
+	var now = new Date().getTime();
+	var distance = countDownDate - now;
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	$("#countdown_days").html(days);
+	$("#countdown_hours").html(hours);
+	$("#countdown_minutes").html(minutes);
+	$("#countdown_seconds").html(seconds);
+	var percen_day = (distance % (1000 * 60 * 60 * 24 * 30))/(1000 * 60 * 60 * 24 * 30 / 98);
+	$("#countdown_cell_day").stop().animate({'background-position-y': percen_day.toString() + '%'}, 16000, 'linear');
+	var percen_hour = (distance % (1000 * 60 * 60 * 24))/(1000 * 60 * 60 * 24/ 98);
+	$("#countdown_cell_hour").stop().animate({'background-position-y': percen_hour.toString() + '%'}, 8000, 'linear');
+	var percen_min = (distance % (1000 * 60 * 60))/(1000 * 60 * 60 / 98);
+	$("#countdown_cell_min").stop().animate({'background-position-y': percen_min.toString() + '%'}, 4000, 'linear');
+	var percen_sec = (distance % (1000 * 60))/(1000 * 60 / 98);
+	$("#countdown_cell_sec").stop().animate({'background-position-y': percen_sec.toString() + '%'}, 2000, 'linear');
+}, 2000);
 
 /*
 function boxRollovers() {

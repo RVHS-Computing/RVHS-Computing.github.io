@@ -111,17 +111,33 @@ html, body {
 	height: 5rem;
 }
 
-#introduction{
+#scrollbar{
+	position: fixed;
+	right: 0px;
+}
+
+.scroll-item{
+	border-top: solid 1px grey;
+	line-height: 3rem;
+	font-size: 1rem;
+	width: 15rem;
+	color: rgb(40, 40, 40);
+	display: block;
+	text-decoration: none!important;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.scroll-item:hover, .active{
+	color: black;
+	background-color: rgba(255, 190, 120, 0.8);
+}
+
+#container{
 	max-width: 800px;
 	width: 100%;
 	margin: auto;
+	margin-right: 18rem;
 	margin-bottom: 2rem;
-}
-
-#workshop-description{
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-	margin: 1rem;
-	padding: 1rem;
 }
 
 .header{
@@ -136,19 +152,11 @@ html, body {
 	font-family: montserrat;
 	text-align: justify;
 	direction: ltr;
-}
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+	margin: 1rem;
+	padding: 1rem;}
 
-#title{
-	height: 15rem;
-	background-image: url(/static/images/workshop-background.png);
-	background-size: cover;
-	margin-bottom: 3rem;
-	padding: 2rem;
-	display: table;
-	width: 100%;
-}
-
-#header-1{
+.header-cover{
 	background-color: rgba(0, 0, 0, 0.6);
 	display: table-cell;
 	vertical-align: middle;
@@ -164,12 +172,29 @@ html, body {
 	letter-spacing: 2px;
 }
 
-#calendar{
-	max-width: 800px;
+.title{
+	height: 15rem;
+	background-size: cover;
+	margin-bottom: 3rem;
+	padding: 2rem;
+	display: table;
 	width: 100%;
-	margin: auto;
-	max-height: 600px;
-	height: 600px;
+}
+
+#title-python{
+	background-image: url(/static/images/python.png);
+}
+
+#title-web{
+	background-image: url(/static/images/web.png);
+}
+
+#title-drone{
+	background-image: url(/static/images/drone.png);
+}
+
+#title-ai{
+	background-image: url(/static/images/ai.png);
 }
 
 footer{
@@ -250,5 +275,8 @@ footer{
 	}
 	#calendar{
 		height: 300px;
+	}
+	#scollbar{
+		display: none;
 	}
 }

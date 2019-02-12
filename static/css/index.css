@@ -13,6 +13,11 @@
 	src: url(/static/fonts/Montserrat-Bold.otf);
 }
 
+@font-face {
+	font-family: numbers;
+	src: url(/static/fonts/number.ttf);
+}
+
 html, body {
 	height: 100%;
 	scroll-behavior: smooth;
@@ -172,7 +177,6 @@ html, body {
 	background-position: 100% 0%;
 }
 
-
 #running-code{
 	z-index: -1;
 }
@@ -197,42 +201,61 @@ html, body {
 	margin-bottom: 3rem;
 }
 
-.mottos{
+
+#countdown-timer{
 	text-align: center;
-	max-width: 60rem;
-	margin: auto;
-	width: 100%;
-	overflow-x: hidden;
-	padding: 1rem;
+	max-width: 800px;
+	color: white;
 }
 
-#motto-left{
-	direction: rtl;
-}
-
-#motto1{
-	text-align: left;
-	margin-right: auto;
-	margin-left: 60rem;
-}
-
-#motto2{
-	text-align: right;
-	margin-left: auto;
-	margin-right: 60rem;
-}
-
-.motto{
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+.countdown-cell{
 	margin: 1rem;
-	padding: 1rem;
-	width: 40rem;
+	width: 100%;
+	display: inline-block;
+	border-radius: 2rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	border: solid rgba(186, 196, 206, 1) 5px;
+	background: linear-gradient(to top, rgba(194, 178, 128, 0.9) 50%, rgba(206, 216, 226, 1) 50%);
+	background-size: 100% 200%;
+	background-position: 0% 0%;
+}
+
+.countdown-value{
+	font-size: 5rem;
+	line-height: 100%;
+	font-family: numbers;
+}
+
+.countdown-unit{
+	font-family: montserrat;
+}
+
+#sign-up-link{
+	display: block;
+	margin: auto;
+	font-size: 1.25rem;
+	margin-top: 1rem;
+	color: rgb(100, 100, 100, 1);
+	text-decoration: none!important;
+	font-family: montserrat;
+}
+
+#sign-up-link:hover{
+	color: rgb(50, 50, 50);
+}
+
+@media screen and (max-width: 576px) {
+	.countdown-cell{
+		max-width: 10rem;
+	}
 }
 
 .header{
-	font-size: 1.25rem;
+	font-size: 2rem;
 	font-family: montserrat-semibold;
 	margin-bottom: 1rem;
+	letter-spacing: 3px;
 }
 
 .description{
@@ -284,7 +307,7 @@ footer{
 }
 
 .row{
-	margin: 0 !important;
+	margin: auto !important;
 }
 
 @media screen and (max-width: 500px) {
@@ -307,6 +330,8 @@ footer{
 	}
 	#top{
 		height: 60px;
+	}
+	.header{
 	}
 	.motto{
 		width: 100%;
