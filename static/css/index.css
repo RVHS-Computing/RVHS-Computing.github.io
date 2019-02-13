@@ -245,6 +245,11 @@ html, body {
 	color: rgb(50, 50, 50);
 }
 
+#bold{
+	font-family: montserrat-bold;
+}
+
+
 @media screen and (max-width: 576px) {
 	.countdown-cell{
 		max-width: 10rem;

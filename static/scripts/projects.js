@@ -32,12 +32,6 @@ $('#to_projects').click(function(event) {
 		}, 2000, function() {
 			var $target = $(target);
 			$target.focus();
-			if ($target.is(":focus")) {
-				return false;
-			} else {
-				$target.attr('tabindex','-1');
-				$target.focus();
-			};
 		});
 	};
 });
@@ -52,12 +46,6 @@ $('#to_python').click(function(event) {
 		}, 2000, function() {
 			var $target = $(target);
 			$target.focus();
-			if ($target.is(":focus")) {
-				return false;
-			} else {
-				$target.attr('tabindex','-1');
-				$target.focus();
-			};
 		});
 	};
 });
@@ -72,12 +60,6 @@ $('#to_web').click(function(event) {
 		}, 2000, function() {
 			var $target = $(target);
 			$target.focus();
-			if ($target.is(":focus")) {
-				return false;
-			} else {
-				$target.attr('tabindex','-1');
-				$target.focus();
-			};
 		});
 	};
 });
@@ -92,12 +74,6 @@ $('#to_drone').click(function(event) {
 		}, 1000, function() {
 			var $target = $(target);
 			$target.focus();
-			if ($target.is(":focus")) {
-				return false;
-			} else {
-				$target.attr('tabindex','-1');
-				$target.focus();
-			};
 		});
 	};
 });
@@ -112,12 +88,6 @@ $('#to_ai').click(function(event) {
 		}, 2000, function() {
 			var $target = $(target);
 			$target.focus();
-			if ($target.is(":focus")) {
-				return false;
-			} else {
-				$target.attr('tabindex','-1');
-				$target.focus();
-			};
 		});
 	};
 });

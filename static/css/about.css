@@ -162,7 +162,7 @@ html, body {
 }
 
 #header2{
-	color: rgb(255, 155, 55);
+	color: rgb(255, 75, 35);
 }
 
 
@@ -177,6 +177,14 @@ html, body {
 	margin-bottom: 1rem;
 	letter-spacing: 3px;
 }
+
+.header-1{
+	font-size: 2rem;
+	font-family: montserrat-bold;
+	margin-bottom: 1rem;
+	letter-spacing: 3px;
+}
+
 
 .description{
 	font-size: 0.9rem;
@@ -257,6 +265,9 @@ footer{
 	}
 	.header{
 		font-size: 1.5rem;
+	}
+	.header-1{
+		font-size: 1.25rem;
 	}
 	.motto{
 		width: 100%;
