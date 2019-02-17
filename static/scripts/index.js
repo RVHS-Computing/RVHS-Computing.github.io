@@ -108,7 +108,11 @@ var x = setInterval(function() {
 	$("#countdown_cell_min").stop().animate({'background-position-y': percen_min.toString() + '%'}, 4000, 'linear');
 	var percen_sec = (distance % (1000 * 60))/(1000 * 60 / 98);
 	$("#countdown_cell_sec").stop().animate({'background-position-y': percen_sec.toString() + '%'}, 2000, 'linear');
-}, 2000);
+	if (distance < 0) {
+		clearInterval(x);
+		$("#countdown-timer").css('display', 'none');
+		}
+	}, 2000);
 
 /*
 function boxRollovers() {
